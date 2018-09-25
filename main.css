@@ -1,0 +1,337 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: relative;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 20px;
+}
+.intro{
+    font-family: 'Baloo Tamma', cursive;
+    width: 1022px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -511px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: transparent;
+    color: black;
+}
+.logo{
+    position: absolute;
+    font-size: 45px;
+    margin:0;
+    padding:0;
+    text-shadow: -2px 2px rgba(119, 119, 119, 0.50);
+    opacity: 0;
+}
+.logo.part1{
+    top: 0px;
+    left: 427px;
+    display: inline;
+    transform: rotate(90deg);
+}
+.logo.part2{
+    top: 0px;
+    left: 540px; /*+70*/
+    display: inline;
+    transform: rotate(-90deg);
+}
+.logo.part3{
+    top:50%;
+    left: 490px;
+}
+.screen{
+    background-color: black;
+    display: none;
+    width: 1022px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -511px;
+    border: 1px solid #32353E;
+}
+.screen.background{
+    background: url('img/bubbles2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.menu{
+    display: flex;
+    color: #2d032f;
+    height: 100%;
+    width: 122px;
+    text-align: left;
+    flex-direction: column;
+    background-color: rgba(100, 0, 98, 0.6)
+}
+.menu>div{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.menu h1,
+.menu h2,
+.menu h4  {
+    text-align: center;
+    line-height: 25px;
+    margin: 0;
+}
+.menu .info{
+    background-color: rgba(0, 0, 0, 0.40);
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    line-height: 30px;
+    border-radius: 10px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.menu .text-icon{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.menu .clock > div{
+    background-image: url(img/clock.png);
+}
+.menu .score > div{
+    background-image: url(img/star.png);
+}
+.menu .tutorial .title{
+    color: white;
+}
+.menu .tutorial{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.menu .color{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border-radius: 12px;
+    opacity:1;
+}
+.menu .color.active{
+    opacity: .4 !important;
+}
+.menu .color h4{
+    line-height: 40px;
+}
+.menu .color.q{
+    background-color: rgba(255, 143, 255, 0.85);
+}
+.menu .color.w{
+    background-color: rgba(78, 236, 78, 0.85);
+}
+.menu .color.e{
+    background-color: rgba(68, 225, 251, 0.85);
+}
+.menu .color.r{
+    background-color: rgba(236, 254, 65, 0.85);
+}
+.menu p{
+    color: white;
+}
+.menu .tutorial .icon{
+    width: 35px;
+    height: 35px;
+    background: url('img/click-tut.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.board{
+    margin: auto;
+    position: relative;
+    height: 600px;
+    width: 900px;
+    background: transparent;
+}
+.dashboard,
+.finalscreen{
+    display: none;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard .title{
+    width: 50%;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+.dashboard .title h2{
+    margin: 0;
+    padding-top: 10px;
+}
+.dashboard .box{
+    position: relative;
+    width: 440px;
+    height: 500px;
+}
+.dashboard .box .controlsbox{
+    position: absolute;
+    width: 40px;
+    height: 140px;
+    top: calc(50% - 70px);
+    left: 20px;
+    background-color: rgba(108, 48, 166, 0.65);
+    border: 1px solid #ccaecc;
+    border-radius: 15px;
+}
+.controlsbox .top{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    opacity: 0.8;
+    transform: rotate(-90deg);
+    background: url(img/arrow.png), no-repeat, 100%;
+    cursor: pointer;
+}
+.controlsbox .bottom{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 8px;
+    opacity: 0.8;
+    transform: rotate(90deg);
+    background: url(img/arrow.png), no-repeat, 100%;
+    cursor: pointer;
+}
+.dashboard .panelroom{
+    position: relative;
+    overflow: hidden;
+    width: 340px;
+    height: inherit;
+    margin-left: 80px;
+}
+.dashboard .scrollroom{
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard .panel{
+    height: 500px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dashboard .content{
+    width: 300px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.button{
+    cursor: pointer;
+    background-color: rgba(2, 0, 35, 0.75);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    height: auto;
+    padding: 2px 0;
+    color: white
+}
+.startgame{
+    bottom: 80px;
+}
+.restart{
+    margin: 20px auto;
+}
+.finalscreen .panel{
+    width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.finalscreen .panel p{
+    text-shadow: -1px 1px rgba(119, 119, 119, 0.50);
+}
+.finalscreen .highlight1{
+    background-color: rgba(108, 48, 166, 0.70);
+    border: 1px solid #ccaecc;
+    border-radius: 15px 15px 0 0;
+    margin:0;
+    color: white;
+    padding: 5px 0;
+}
+.finalscreen .highlight2{
+    background-color: rgba(108, 48, 166, 0.70);
+    border: 1px solid #ccaecc;
+    margin: 15px 0;
+    color: white;
+    padding: 5px 0;
+}
+.finalscreen .score_box{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.finalscreen .score_box p{
+    margin: 0;
+}
+.game_board{
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    position: relative;
+    /* cursor: url(img/click.png), auto; */
+}
+.game_board .info{
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px; 
+    margin-left: -95px;
+    color: #FCFCFC;
+    text-shadow: -2px 2px rgba(119, 119, 119, 0.50);
+}
+.game_board .item{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: solid 2px rgba(70, 70, 70, 0.65);
+    z-index: 100;
+    /* background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    box-shadow: -3px -4px 4px 2px rgba(118, 118, 118, 0.70) inset;
+    cursor: pointer;
+}
